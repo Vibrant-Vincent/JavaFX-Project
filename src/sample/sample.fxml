@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1140.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox prefHeight="707.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/VibrantAmerica.jpg" />
+               </image></ImageView>
+            <Label prefHeight="17.0" prefWidth="220.0" text="Plate List">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" text="APPROVE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Search.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Add" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Update" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Delete" />
+         </children>
+      </VBox>
+      <HBox layoutX="218.0" layoutY="100.0" prefHeight="29.0" prefWidth="662.0">
+         <children>
+            <Label text="TEST QC Result">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label text="Total:">
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Selected:">
+               <HBox.margin>
+                  <Insets left="80.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" text="Select All">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Select None">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+      <HBox layoutX="218.0" prefHeight="100.0" prefWidth="668.0">
+         <children>
+            <Label text="Plate Approval">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Current User :">
+               <HBox.margin>
+                  <Insets left="60.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="54.0">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="110.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="47.0">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Poweroff.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" top="10.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="table" layoutX="218.0" layoutY="354.0" prefHeight="219.0" prefWidth="662.0">
+        <columns>
+          <TableColumn fx:id="SampleBarcode" prefWidth="144.0" text="SampleBarcode" />
+          <TableColumn fx:id="Location" prefWidth="64.0" text="Location" />
+            <TableColumn fx:id="Selected" prefWidth="71.0" text="Selected" />
+            <TableColumn fx:id="ALPSIGA" prefWidth="65.0" text="ALPSIGA" />
+            <TableColumn fx:id="ALPSIGG_IGM" prefWidth="133.0" text="ALPSIGG_IGM" />
+        </columns>
+      </TableView>
+      <HBox layoutX="217.0" layoutY="324.0" prefHeight="29.0" prefWidth="662.0">
+         <children>
+            <Label text="Sample Result">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Total:">
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Selected:">
+               <HBox.margin>
+                  <Insets left="80.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" text="Select All">
+               <HBox.margin>
+                  <Insets left="150.0" top="3.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Selected None">
+               <HBox.margin>
+                  <Insets left="30.0" top="3.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="tableview" layoutX="218.0" layoutY="129.0" prefHeight="200.0" prefWidth="662.0" />
+      <VBox fx:id="pnItems" layoutX="246.0" layoutY="518.0" prefHeight="183.0" prefWidth="664.0" />
+      <ScrollPane layoutX="224.0" layoutY="611.0" prefHeight="194.0" prefWidth="662.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="48.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" />
+      <Label text="JFK" />
+      <Label text="10/11/2020" />
+      <Label text="\$900" />
+      <Button mnemonicParsing="false" style="-fx-background-color: #ffff; -fx-border-color: #2A73FF; -fx-border-radius: 20;" styleClass="-fx" text="Button" />
+   </children>
+</HBox>
