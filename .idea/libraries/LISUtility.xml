@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LISUtility">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Java/LISUtility.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
