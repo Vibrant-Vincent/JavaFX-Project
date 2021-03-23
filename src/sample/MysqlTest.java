@@ -21,7 +21,7 @@ public class MysqlTest {
     public  String getTestType(String pillarPlateID) throws SQLException {
         String testName = null;
         try(DataBaseUtility dbUtility = new DataBaseUtility("SELECT * FROM vibrant_test_tracking.pillar_plate_info where pillar_plate_id = "  + "\"" + pillarPlateID + "\"", PConstants.TSP_SERVER)) {
-            System.out.println("ConnectionEstablished");
+//            System.out.println("ConnectionEstablished");
             dbUtility.generateRecords_throwException();
             try (ResultSet resultSet = dbUtility.getRecords()) {
                 while (resultSet.next()) {
@@ -38,7 +38,7 @@ public class MysqlTest {
     public  Set<String> getQCNames(String testName) throws SQLException {
         Set<String> qcNamesSet = new HashSet<>();
         try(DataBaseUtility dbUtility = new DataBaseUtility("SELECT * FROM tsp_test_qc_data.plate_qc_mapping where test_type = " + "\"" + testName + "\"", PConstants.TSP_SERVER)) {
-            System.out.println("ConnectionEstablished");
+//            System.out.println("ConnectionEstablished");
             dbUtility.generateRecords_throwException();
             try (ResultSet resultSet = dbUtility.getRecords()) {
                 while (resultSet.next()) {
@@ -57,12 +57,7 @@ public class MysqlTest {
     public  Set<String> getTestNames(String pillarPlateID) throws SQLException {
         Set<String> testName = new HashSet<>();
         try(DataBaseUtility dbUtility = new DataBaseUtility("SELECT * FROM tsp_test_qc_data.qc_data_v2 where pillar_plate_id = "  + "\"" + pillarPlateID + "\"", PConstants.TSP_SERVER)) {
-//            System.out.println(dbUtility);
-            System.out.println("ConnectionEstablished");
-            //            String sql = "SELECT * FROM tsp_test_qc_data.qc_data_v2";
             dbUtility.generateRecords_throwException();
-
-            //            dbUtility.changeSQL(sql);
             try (ResultSet resultSet = dbUtility.getRecords()) {
                 while (resultSet.next()) {
                     testName.add(resultSet.getString("test_name"));
@@ -83,7 +78,7 @@ public class MysqlTest {
                 "and test_name = " + "\"" + testName + "\"" +
                 "and qc_name = " + "\"" + QCName + "\""
                 , PConstants.TSP_SERVER)){
-            System.out.println("ConnectionEstablished");
+//            System.out.println("ConnectionEstablished");
             dbUtility.generateRecords_throwException();
             try (ResultSet resultSet = dbUtility.getRecords()) {
                 while (resultSet.next()) {
@@ -103,7 +98,7 @@ public class MysqlTest {
                 "and test_name = " + "\"" + testName + "\"" +
                 "and qc_name = " + "\"" + QCName + "\""
                 , PConstants.TSP_SERVER)) {
-            System.out.println("ConnectionEstablished");
+//            System.out.println("ConnectionEstablished");
             dbUtility.generateRecords_throwException();
             try (ResultSet resultSet = dbUtility.getRecords()) {
                 while (resultSet.next()) {

@@ -36,7 +36,7 @@
             </ImageView>
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Add" />
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Update" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#clearContents" prefHeight="25.0" prefWidth="73.0" text="Clear" />
          </children>
       </VBox>
       <HBox layoutX="218.0" layoutY="100.0" prefHeight="29.0" prefWidth="662.0">
